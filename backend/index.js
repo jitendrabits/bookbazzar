@@ -8,7 +8,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/practice_mern');
+// mongoose.connect('mongodb://127.0.0.1:27017/practice_mern');
+mongoose.connect('mongodb+srv://root:root@cluster0.bnxofrs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+
 
 app.post('/register', (req, res)=>{
     // To post / insert data into database
